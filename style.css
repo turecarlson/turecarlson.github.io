@@ -63,7 +63,8 @@ FontAwesome Icon Styling
 ////////////////////////
 */
 
-.fab {
+.fab,
+.far {
     color: grey;
     font-size: x-large;
     transition: 170ms;
