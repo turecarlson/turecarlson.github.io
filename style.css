@@ -1,0 +1,276 @@
+html,
+body {
+    margin: 0px;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    background-color: black;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
+
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
+
+
+/* 
+Starter code for scroll-bar found at
+https: //www.w3schools.com/howto/howto_css_custom_scrollbar.asp 
+*/
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\
+FontAwesome Icon Styling
+////////////////////////
+*/
+
+.fab {
+    color: grey;
+    font-size: x-large;
+    transition: 170ms;
+}
+
+.fab:visited {
+    color: grey;
+}
+
+.fa-spotify:hover {
+    color: green;
+}
+
+.fa-github:hover {
+    color: purple;
+}
+
+.fa-linkedin:hover {
+    color: royalblue;
+}
+
+.copyright {
+    color: grey;
+    font-size: small;
+}
+
+.copyright::after {
+    content: "©Ture Carlson 2021";
+}
+
+.nav-box>a {
+    color: grey;
+    font-variant: small-caps;
+    text-decoration: none;
+    transition: 170ms;
+}
+
+.nav-box>a:hover {
+    color: white;
+}
+
+.aboutme-link>a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 170ms;
+}
+
+.aboutme-link>a:visited {
+    color: whitesmoke;
+}
+
+.aboutme-link>a:hover {
+    color: grey;
+}
+
+.viewport {
+    min-height: 100%;
+    max-height: 100%;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: "header" "main";
+}
+
+.header {
+    min-height: 100%;
+    border-bottom: 1px solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 67% 33%;
+    grid-template-areas: "top-left top-right" "bottom-left bottom-right";
+    /*https://wallpaperaccess.com/full/1866720.jpg*/
+    background-image: url("./media/brushed-aluminum.jpg");
+    /* border: 1px solid hotpink; */
+}
+
+.header>.top-left {
+    max-height: 100%;
+    grid-area: top-left;
+    /* border: 1px solid red; */
+    padding: 10px;
+}
+
+.header>.top-left>.title>h1>a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 170ms;
+}
+
+.header>.top-left>.title>h1>a:visited {
+    color: whitesmoke;
+}
+
+.header>.top-left>.title>h1>a:hover {
+    color: grey;
+}
+
+.header>.top-right {
+    max-height: 100%;
+    grid-area: top-right;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header>.top-right>.icons {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.header>.top-right>.icons>div {
+    padding: 20px;
+}
+
+.header>.bottom-left {
+    max-height: 100%;
+    grid-area: bottom-left;
+    /* border: 2px solid yellow; */
+}
+
+.header>.bottom-right {
+    grid-area: bottom-right;
+    /* border: 2px solid palevioletred; */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.header>.bottom-right>.nav-box {
+    color: grey;
+    text-align: right;
+    padding: 10px;
+    /* border: 1px solid hotpink; */
+    transition: 100ms;
+    color: grey;
+}
+
+.main {
+    grid-area: main;
+    overflow: auto;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "content" "footer";
+}
+
+.main>.content {
+    /* margin: 30px; */
+    padding: 30px;
+}
+
+.main>.content>.content-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main>.content>.content-body>div {
+    padding: 5px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main>.footer {
+    grid-area: footer;
+    background-color: black;
+    border-top: 1px solid;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "top" "bottom";
+    color: white;
+    padding: 10px;
+    background-image: url("./media/brushed-aluminum.jpg");
+}
+
+.main>.footer>.top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main>.footer>.top>div {
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main>.footer>.bottom {
+    grid-area: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: small;
+}
+
+#spotify-player {
+    /* width: 40%; */
+    /* height: 100px; */
+}
+
+#audio-textbox {
+    /* width: 40%; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
